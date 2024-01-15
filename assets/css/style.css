@@ -18,7 +18,9 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-h1, h2 ,h3 {
+h1,
+h2,
+h3 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -54,7 +56,7 @@ header a {
     list-style-type: none;
 }
 
-#menu > li {
+#menu>li {
     margin-bottom: 1em;
 }
 
@@ -115,7 +117,8 @@ main {
     padding-left: 10px;
 }
 
-#cover-text > h2, #cover-text > h3 {
+#cover-text>h2,
+#cover-text>h3 {
     color: #ffffff;
 }
 
@@ -132,8 +135,8 @@ main {
 
 }
 
-#benefits-physical > div,
-#benefits-mental > div {
+#benefits-physical>div,
+#benefits-mental>div {
     line-height: 20px;
     margin-bottom: 20px;
 }
@@ -174,7 +177,7 @@ main {
 
 }
 
-#times  div {
+#times div {
     color: #fafafa;
     background-color: rgba(0, 0, 0, .6);
     padding: 15px;
@@ -188,7 +191,7 @@ main {
 
 }
 
-#times  h3 {
+#times h3 {
     /* Override the heading colour set in general styles */
     color: #fafafa;
 
@@ -221,8 +224,18 @@ main {
     color: #3a3a3a;
 }
 
+/* Media query: large or landscape phones (576px and up) */
+@media screen and (min-width: 576px) {
+    #photos {
+        column-count: 2;
+        column-gap: 0;
+    }
+
+}
+
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
+
     /* Header */
     nav {
         display: block;
@@ -236,7 +249,7 @@ main {
         display: flex;
     }
 
-    #menu > li {
+    #menu>li {
         padding-left: 1rem;
     }
 
@@ -256,13 +269,13 @@ main {
         margin-top: 79px;
     }
 
-        /* Hero image */
-        #cover-text {
-            width: 300px;
-            right: 50px;
-        }
-        
-            /* Reasons section */
+    /* Hero image */
+    #cover-text {
+        width: 300px;
+        right: 50px;
+    }
+
+    /* Reasons section */
     #benefits-physical,
     #benefits-mental {
         display: flex;
@@ -280,24 +293,41 @@ main {
         align-self: flex-end;
     }
 
+    /* Gallery */
+    #photos {
+        column-count: 3;
+    }
+
 }
-/* Media query: laptops and larger (992px and up) */
+
+/* Media query: laptops and desktops (992px and up) */
 @media screen and (min-width: 992px) {
+
     /* Menu - A tags */
-    #menu a:hover{
+    #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
     }
+
+    /* Gallery */
+    #photos {
+        column-count: 4;
+    }
+
 }
+
 /* Media query: laptops and larger (1200px and up) */
 @media screen and (min-width: 1200px) {
+
     /* Reasons section */
     #benefits {
         display: flex;
         flex-direction: row;
     }
-    #benefits > div {
+
+    #benefits>div {
         flex: 1;
     }
+
     #benefits-image {
         order: 0;
     }
@@ -306,11 +336,11 @@ main {
         order: 1;
     }
 
-    #benefits-mental > div {
+    #benefits-mental>div {
         align-self: flex-start;
     }
 
-    #benefits-physical > div {
+    #benefits-physical>div {
         align-self: flex-end;
     }
 }
